@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class mouse {
+        name;
+        weight;
+        speed;
+        status;
+
+        constructor(name, weight, speed, status) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+        }
+        sound() {
+            console.log('not a mouse')
+        }
+    }
+    class Cat {
+        name;
+        weight;
+        speed
+
+        constructor(name, weight, speed, status) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+
+        sound() {
+            console.log('I am a cat')
+        }
+
+        bMouse(mouse) {
+            if (this.speed > mouse.speed) {
+                return true
+            }
+        }
+
+        eat() {
+            if ((mouse.status === 'live') && (this.bMouse(mouse) === true)) {
+                this.weight += mouse.weight
+            }
+        }
+    }
+
+    let cat = new Cat('meo', 5, 15)
+    let mouse = new Mouse('chuot', 1, 10, )
+    alert(cat.weight)
+</script>
+</body>
+</html>
